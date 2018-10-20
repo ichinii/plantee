@@ -16,6 +16,8 @@ local function update(dt, index, instance, ecman)
 
   local left = love.keyboard.isDown('a')
   local right = love.keyboard.isDown('d')
+  left = not right and left
+  right = not left and right
   local jump = love.keyboard.isDown('space')
   local grounded = false
   local pos = vec2(px, py)
